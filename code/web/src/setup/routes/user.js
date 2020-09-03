@@ -3,6 +3,7 @@ import Login from '../../modules/user/Login'
 import Signup from '../../modules/user/Signup'
 import Profile from '../../modules/user/Profile'
 import Subscriptions from '../../modules/user/Subscriptions'
+import List from '../../modules/user/List'
 
 // User routes
 export default {
@@ -25,6 +26,11 @@ export default {
   subscriptions: {
     path: '/user/subscriptions',
     component: Subscriptions,
+    auth: true
+  },
+  products: {
+    path: '/user/products',
+    component: List,
     auth: true
   }
 }
